@@ -17,7 +17,8 @@ import lombok.Setter;
 public enum ExceptionEnum {
 
     PRICE_COUNT_NOT_NULL(400,"😄😄，商品价格不能为空！！！"),
-    CATEGORY_NOT_FOUND(404,"商品分类没查到")
+    CATEGORY_NOT_FOUND(404,"商品分类没查到"),
+    UPLOAD_ERROR(404,"文件上传失败")
     ;
     private Integer code;
     private String msg;
