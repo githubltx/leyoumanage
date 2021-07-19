@@ -2,6 +2,9 @@ package com.leyou.item.service;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.leyou.common.enums.ExceptionEnum;
+import com.leyou.common.exception.LyException;
 import com.leyou.common.vo.PageResult;
 import com.leyou.item.mapper.BrandMapper;
 import com.leyou.item.pojo.Brand;
@@ -9,6 +12,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
@@ -35,9 +39,14 @@ public class BrandService {
             example.setOrderByClause(orderByClause);
         }
         // 查询
-        Page<Brand> pageInfo = (Page<Brand>) brandMapper.selectByExample(example);
+        List<Brand> brandList = brandMapper.selectByExample(example);
+        if(CollectionUtils.isEmpty(brandList)){
+            throw new LyException(ExceptionEnum.NOT_FOUND);
+        }
+        PageInfo<Brand> pageInfo = new PageInfo<Brand>(brandList);
+
         // 返回结果
-        return new PageResult<>(pageInfo.getTotal(), pageInfo);
+        return new PageResult<Brand>(pageInfo.getTotal(), brandList);
     }
     @Transactional
     public void saveBrand(Brand brand, List<Long> cids) {
@@ -47,5 +56,20 @@ public class BrandService {
         for (Long cid : cids) {
             this.brandMapper.insertCategoryBrand(cid, brand.getId());
         }
+    }
+    public Brand queryById(Long id){
+        Brand brand = brandMapper.selectByPrimaryKey(id);
+        if(brand==null){
+            throw new LyException(ExceptionEnum.NOT_FOUND);
+        }
+        return brand;
+    }
+
+    public List<Brand> BrandByCid(Long cid) {
+        List<Brand> brandList = brandMapper.queryByCatagoryId(cid);
+//        if(CollectionUtils.isEmpty(brandList)){
+//            throw new LyException(ExceptionEnum.NOT_FOUND);
+//        }
+        return brandList;
     }
 }

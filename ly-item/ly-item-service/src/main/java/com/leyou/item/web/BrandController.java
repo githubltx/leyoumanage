@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import sun.security.provider.certpath.CertId;
 
 import java.util.List;
 
@@ -36,8 +37,12 @@ public class BrandController {
  * @return
  */
   @PostMapping
-  public ResponseEntity<Void> saveBrand(Brand brand, @RequestParam("cids") List<Long> cids) {
+  public ResponseEntity<Brand> saveBrand(Brand brand, @RequestParam("cids") List<Long> cids) {
       this.brandService.saveBrand(brand, cids);
-      return new ResponseEntity<>(HttpStatus.CREATED);
+      return new ResponseEntity<Brand>(HttpStatus.CREATED);
+  }
+  @GetMapping("/cid/{cid}")
+    public ResponseEntity<List<Brand>> queryBrandByCid(@PathVariable ("cid") Long cid){
+        return ResponseEntity.ok(brandService.BrandByCid(cid));
   }
 }

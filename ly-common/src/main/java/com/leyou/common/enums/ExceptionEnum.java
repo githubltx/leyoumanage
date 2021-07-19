@@ -16,8 +16,11 @@ import lombok.Setter;
 @AllArgsConstructor
 public enum ExceptionEnum {
 
+    NOT_FOUND(404,"结果为空"),
     PRICE_COUNT_NOT_NULL(400,"😄😄，商品价格不能为空！！！"),
     CATEGORY_NOT_FOUND(404,"商品分类没查到"),
+    SPEC_GROUP_NOT_FOUND(404,"商品属性分组没查到"),
+    SPEC_GROUP_FAIL(404,"商品属性分组修改失败"),
     UPLOAD_ERROR(404,"文件上传失败")
     ;
     private Integer code;
