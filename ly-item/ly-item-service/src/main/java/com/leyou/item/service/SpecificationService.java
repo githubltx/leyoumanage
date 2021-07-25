@@ -65,9 +65,11 @@ public class SpecificationService {
         return specGroup;
     }
 
-    public List<SpecParam> queryParamByGid(Long gid) {
+    public List<SpecParam> queryParamList(Long gid,Long cid,Boolean seaching) {
         SpecParam specParam = new SpecParam();
         specParam.setGroupId(gid);
+        specParam.setCid(cid);
+        specParam.setSearching(seaching);
         List<SpecParam> list = specParamMapper.select(specParam);
         if(CollectionUtils.isEmpty(list)){
              new ResponseEntity<SpecParam>(HttpStatus.NOT_FOUND);

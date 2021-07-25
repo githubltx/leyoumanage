@@ -11,8 +11,8 @@ zuul:
       path: /upload/**
       serviceId: upload-service
       strip-prefix: false
-  ignored-services:
-    - upload-service # 忽略upload-service服务
+  #ignored-services:
+    #- upload-service # 忽略upload-service服务
 eureka:
   client:
     fetch-registry: true

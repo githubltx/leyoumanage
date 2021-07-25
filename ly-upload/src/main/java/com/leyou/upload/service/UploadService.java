@@ -60,7 +60,7 @@ public class UploadService {
 //            file.transferTo(new File(dir, file.getOriginalFilename()));
             //上传到fastdfs
             String extension = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf(".")+1);
-            extension = StringUtils.substringAfterLast(file.getOriginalFilename(),".");
+            //extension = StringUtils.substringAfterLast(file.getOriginalFilename(),".");
             final StorePath storePath = fastFileStorageClient.uploadFile(file.getInputStream(), file.getSize(), extension, null);
             // 2.3、拼接图片地址
             String url = uploadProperties.getBaseUrl() + storePath.getFullPath();

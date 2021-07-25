@@ -21,7 +21,8 @@ public enum ExceptionEnum {
     CATEGORY_NOT_FOUND(404,"商品分类没查到"),
     SPEC_GROUP_NOT_FOUND(404,"商品属性分组没查到"),
     SPEC_GROUP_FAIL(404,"商品属性分组修改失败"),
-    UPLOAD_ERROR(404,"文件上传失败")
+    UPLOAD_ERROR(404,"文件上传失败"),
+    GOODS_SAVE_ERROR(500,"商品新增失败"),
     ;
     private Integer code;
     private String msg;
