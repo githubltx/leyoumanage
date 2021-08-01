@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-23sjms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-23sjms/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-dubbo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-dubbo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-elasticsearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-elasticsearch/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-high-concurrency/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-high-concurrency/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-jvm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-jvm/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-netty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-netty/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-redis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-spring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-spring/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-tomcat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/ly-tomcat/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.leyou.study/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ly-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ly-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ly-item/ly-item-interface/src/main/java" charset="UTF-8" />

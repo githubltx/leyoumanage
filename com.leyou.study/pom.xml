@@ -6,10 +6,35 @@
 
     <groupId>com.leyou.study</groupId>
     <artifactId>com.leyou.study</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-
+    <modules>
+        <module>ly-dubbo</module>
+        <module>ly-spring</module>
+        <module>ly-netty</module>
+        <module>ly-23sjms</module>
+        <module>ly-redis</module>
+        <module>ly-tomcat</module>
+        <module>ly-jvm</module>
+        <module>ly-high-concurrency</module>
+        <module>ly-mybatis</module>
+        <module>ly-elasticsearch</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.2.RELEASE</version>
+        <relativePath/>
+    </parent>
     <dependencies>
         <!--spring相关包-->
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
@@ -19,6 +44,21 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>4.3.1.RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 </project>
